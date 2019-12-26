@@ -1,7 +1,11 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import { Wrapper, FlexBox, Button } from 'bushido-strap';
+import {
+  Wrapper,
+  FlexBox,
+  Button,
+} from '../Dashboard/node_modules/bushido-strap';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from '../../store/actions/counter';

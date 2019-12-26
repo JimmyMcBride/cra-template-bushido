@@ -7,14 +7,14 @@ import { Route } from 'react-router-dom';
 import { AppWrapper } from 'bushido-strap';
 
 // Importing all routes
-import HomePage from './components/HomePage';
+import Dashboard from './components/Dashboard';
 import ReduxCounter from './components/ReduxCounter';
 
 const App = () => {
   return (
     <AppWrapper>
-      <Route path="/" exact render={props => <HomePage {...props} />} />
-      <Route path="/counter" render={props => <ReduxCounter {...props} />} />
+      <Route path="/" exact render={Dashboard} />
+      <Route path="/counter" render={ReduxCounter} />
     </AppWrapper>
   );
 };
