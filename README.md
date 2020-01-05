@@ -4,21 +4,21 @@
 
 ### yarn
 
-`yarn create react-app <app-name> --template bushido-lite`
+`yarn create react-app <app-name> --template bushido`
 
 ### npm
 
-`npm init react-app <app-name> --template bushido-lite`
+`npm init react-app <app-name> --template bushido`
 
 ### npx
 
-`npx create-react-app <app-name> --template bushido-lite`
+`npx create-react-app <app-name> --template bushido`
 
 ### global
 
 > If create-react-app is installed globally on your computer you can use this command:
 
-`create-react -app <app-name> --template bushido-lite`
+`create-react -app <app-name> --template bushido`
 
 Just like regular create-react-app but so much more. This template includes:
 
