@@ -1,16 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import styled from 'styled-components';
-import {
-  Wrapper,
-  FlexBox,
-  Button,
-} from '../Dashboard/node_modules/bushido-strap';
+import { Wrapper, FlexBox, Button, Box, Card } from "bushido-strap";
 
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from '../../store/actions/counter';
+import { useSelector, useDispatch } from "react-redux";
+import { increment, decrement } from "../../store/actions/counter";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function ReduxCounter() {
   const dispatch = useDispatch();
@@ -18,29 +13,20 @@ export default function ReduxCounter() {
   const count = useSelector(state => state.counter.count);
   return (
     <Wrapper>
-      <HomeLink to="/">Home</HomeLink>
-
-      <Button onClick={() => dispatch(increment())}>++</Button>
-
-      <CodeCount align="center" justify="space-between" width="12rem">
-        Clicked <code>{count}</code> times
-      </CodeCount>
-
-      <Button onClick={() => dispatch(decrement())}>--</Button>
+      <Link to="/">
+        <h1>Home</h1>
+      </Link>
+      <Card width="20rem">
+        <Box height="2rem" />
+        <Button onClick={() => dispatch(increment())}>++</Button>
+        <Box height="2rem" />
+        <FlexBox align="center" justify="space-between" width="12rem">
+          Clicked <code>{count}</code> times!!!
+        </FlexBox>
+        <Box height="2rem" />
+        <Button onClick={() => dispatch(decrement())}>--</Button>
+        <Box height="2rem" />
+      </Card>
     </Wrapper>
   );
 }
-
-const CodeCount = styled(FlexBox)`
-  margin: 1.4rem 1.4rem 1.4rem 0;
-  code {
-    font-size: 2.5rem;
-  }
-`;
-
-const HomeLink = styled(Link)`
-  margin-bottom: 2rem;
-  font-size: 3rem;
-  padding: 0.3rem 1rem;
-  border-radius: 0.25rem;
-`;

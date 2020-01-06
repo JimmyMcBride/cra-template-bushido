@@ -10,13 +10,11 @@ import { AppWrapper } from 'bushido-strap';
 import Dashboard from './components/Dashboard';
 import ReduxCounter from './components/ReduxCounter';
 
-const App = () => {
+export default function App() {
   return (
     <AppWrapper>
-      <Route path="/" exact render={Dashboard} />
-      <Route path="/counter" render={ReduxCounter} />
+      <Route path="/" exact component={Dashboard} />
+      <Route path="/counter" component={ReduxCounter} />
     </AppWrapper>
   );
-};
-
-export default App;
+}

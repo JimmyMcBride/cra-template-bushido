@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Wrapper, Linkton } from 'bushido-strap';
+import { Wrapper, Linkton } from "bushido-strap";
 
 export default function Dashboard() {
   return (
