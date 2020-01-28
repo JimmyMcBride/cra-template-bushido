@@ -1,6 +1,6 @@
 {
   "name": "cra-template-bushido",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "CRA plus redux, router, axios, normalize.css, styled components",
   "main": "template.json",
   "repository": "git+https://github.com/JimmyMcBride/cra-template-bushido.git",
