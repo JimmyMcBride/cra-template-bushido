@@ -6,12 +6,12 @@ import { Route } from "react-router-dom";
 // Using custom styled components from Global folder in components
 import { AppWrapper } from "bushido-strap";
 
-// Using Web Font Loader for google fonts
-import WebFont from "webfontloader";
-
 // Importing all routes
 import Dashboard from "./components/Dashboard";
 import ReduxCounter from "./components/ReduxCounter";
+
+// Using Web Font Loader for google fonts
+import WebFont from "webfontloader";
 
 // setting our font variables
 const h_font = "Comfortaa";
