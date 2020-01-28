@@ -22,6 +22,7 @@
 
 Just like regular create-react-app but so much more. This template includes:
 
+- @callstack/react-theme-provider
 - axios
 - bushido-strap
 - node-sass
@@ -33,6 +34,7 @@ Just like regular create-react-app but so much more. This template includes:
 - redux-thunk
 - serve
 - styled-components
+- webfontloader
 
 There is also a `serve` script that let's your run `serve -s build` and a `build-and-serve` script that runs `npm run build && npm run serve`.
 
@@ -45,13 +47,57 @@ Reducer and action folders are inside a store folder so they are in the same spo
 | --- | components
 | --- | *store* |
 | --- | ------- |actions*
-| --- | --- | reducers*
+| --- | ------- | reducers*
 | App.js
 | index.js
 ```
 
 Routes are set in App.js and all components for routes are built in components folder.
 
-## BUSHIDO_STRAP
+## BUSHIDO-STRAP
 
-WTF is bushido-strap? Well, friend, it is a personal style library of mine. It has a bunch of handy styled components I've slowly crafted over time. It's already set up in this project. [Check out the documentation here to see everything this modest style library has to offer!](https://www.npmjs.com/package/bushido-strap)
+What is bushido-strap? Well, friend, it is a personal style library I create. It's just a bunch of nifty little styled components I've slowly crafted over time. Learning from my peers has probably been the greatest contribution to this project! It's already set up in this template, so check it out! [Here's the documentation, so you can to see everything this modest style library has to offer!](https://www.npmjs.com/package/bushido-strap)
+
+### Adding A Custom Theme
+
+React Theme Provider is set up so you can edit bushido-strap theme's or add your own to use! Just add a theme prop in the ThemeProvider in src/index.js and pass in your custom theme object. You can then import the useTheme hook from your scr/index.js and set `const theme = useTheme();` in your component and you can freely access any of your theme variables by simply accessing your theme variable: `color={theme.myCustomColor}`.
+
+**Example:**
+
+Create a theme.js file in your src folder:
+
+```javascript
+const theme = {
+  myColorOne: "red",
+  myColorTwo: "blue",
+  // if you want to override bushido strap values just reassign them here
+  gray0: "black",
+};
+
+export default theme;
+```
+
+Add your custom theme object to your src/index.js:
+
+```javascript
+import theme from "./theme";
+```
+
+Now pass that theme to your ThemeProvider:
+
+```javascript
+ReactDOM.render(
+  <Provider store={store}>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </Router>
+  </Provider>,
+  document.getElementById("root")
+);
+```
+
+And now you can access both your and bushido-strap's theme objects by importing the useTheme hook from scr/index.js. Any overrides in your theme object will be favored over bushido-strap's theme. 👌
+
+If you don't set up your own custom theme you can just `import theme from "bushido-strap/styled/theme` and use the default theme.
