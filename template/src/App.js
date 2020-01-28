@@ -13,9 +13,11 @@ import WebFont from "webfontloader";
 import Dashboard from "./components/Dashboard";
 import ReduxCounter from "./components/ReduxCounter";
 
+// setting our font variables
 const h_font = "Comfortaa";
 const r_font = "Montserrat";
 
+// using WebFont to easily access Google fonts
 WebFont.load({
   google: {
     families: [h_font, r_font],
@@ -24,7 +26,7 @@ WebFont.load({
 
 export default function App() {
   return (
-    <AppWrapper head_font={`${h_font}`} font={`${r_font}`}>
+    <AppWrapper head_font={h_font} font={r_font}>
       <Route path="/" exact component={Dashboard} />
       <Route path="/counter" component={ReduxCounter} />
     </AppWrapper>

@@ -16,11 +16,13 @@ export default function ReduxCounter() {
       <Link to="/">
         <h1>Home</h1>
       </Link>
-      <Card width="20rem">
+      <Card invert width="20rem" shade>
         <Box height="2rem" />
-        <Button onClick={() => dispatch(increment())}>++</Button>
+        <Button invert onClick={() => dispatch(increment())}>
+          ++
+        </Button>
         <Box height="2rem" />
-        <FlexBox align="center" justify="space-around" width="75%">
+        <FlexBox ac_center jc_around width="75%">
           <Box>Clicked</Box>
           <Box>
             <code>{count}</code>
@@ -28,7 +30,9 @@ export default function ReduxCounter() {
           <Box>times!!!</Box>
         </FlexBox>
         <Box height="2rem" />
-        <Button onClick={() => dispatch(decrement())}>--</Button>
+        <Button invert onClick={() => dispatch(decrement())}>
+          --
+        </Button>
         <Box height="2rem" />
       </Card>
     </Wrapper>
