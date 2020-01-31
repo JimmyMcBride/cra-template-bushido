@@ -19,18 +19,7 @@ import thunk from "redux-thunk";
 // Import reducer/index.js as root reducer, it's where we're combining all our reducer files
 import rootReducer from "./store/reducers";
 
-// We are going to pass bushido-strap's theme to
-import { createTheming } from "@callstack/react-theme-provider";
-import theme from "bushido-strap/styled/theme";
-
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
-
-const { ThemeProvider, useTheme } = createTheming(theme);
-
-// exports the useTheme hook we can use to grab our theme variables.
-// just import theme from this file and set a variable theme to useTheme()
-// then its as easy as theme.myColorOne to access your own custom theming.
-export { useTheme };
 
 // You can add a theme prop to ThemeProvider and pass it any theme of your choosing
 ReactDOM.render(

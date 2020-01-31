@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Wrapper, FlexBox, Button, Box, Card } from "bushido-strap";
+import { Wrapper, Row, Button, Box, Card } from "bushido-strap";
 
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "../../store/actions/counter";
@@ -16,24 +16,24 @@ export default function ReduxCounter() {
       <Link to="/">
         <h1>Home</h1>
       </Link>
-      <Card invert width="20rem" shade>
-        <Box height="2rem" />
+      <Card invert w="20rem">
+        <Box h="2rem" />
         <Button invert onClick={() => dispatch(increment())}>
           ++
         </Button>
-        <Box height="2rem" />
-        <FlexBox ac_center jc_around width="75%">
+        <Box h="2rem" />
+        <Row ac_center jc_around w="75%">
           <Box>Clicked</Box>
           <Box>
             <code>{count}</code>
           </Box>
           <Box>times!!!</Box>
-        </FlexBox>
-        <Box height="2rem" />
+        </Row>
+        <Box h="2rem" />
         <Button invert onClick={() => dispatch(decrement())}>
           --
         </Button>
-        <Box height="2rem" />
+        <Box h="2rem" />
       </Card>
     </Wrapper>
   );
