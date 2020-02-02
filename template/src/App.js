@@ -7,8 +7,8 @@ import { Route } from "react-router-dom";
 import { AppWrapper } from "bushido-strap";
 
 // Importing all routes
-import Dashboard from "./components/Dashboard";
-import ReduxCounter from "./components/ReduxCounter";
+import Dashboard from "./views/Dashboard";
+import ReduxCounter from "./views/ReduxCounter";
 
 // Using Web Font Loader for google fonts
 import WebFont from "webfontloader";
