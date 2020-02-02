@@ -3,7 +3,7 @@ import React from "react";
 // Set up all routes in App
 import { Route } from "react-router-dom";
 
-// Using custom styled components from Global folder in components
+// Using AppWrapper to set font and background for the app
 import { AppWrapper } from "bushido-strap";
 
 // Importing all routes
